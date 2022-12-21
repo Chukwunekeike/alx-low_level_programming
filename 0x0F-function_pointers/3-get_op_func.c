@@ -2,28 +2,24 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - Selects the correct function to perform
- *               the operation asked by the user.
- * @s: The operator passed as argument.
+ * get_op_func - selectes the correts funtion to perfom
+ * @s: the operator passes as argument
  *
- * Return: A pointer to the function corresponding
- *         to the operator given as a parameter.
+ * Return: a pointer 
  */
+
 int (*get_op_func(char *s))(int, int)
 {
-<<<<<<< HEAD
-	op_t key[]={{"+",op_add},{"-",op_sub},{"*",op_mul},{"/",op_div},{"%",op_mod}};
-=======
 	op_t ops[] = {
-		 {"+", op_add},
-		 {"-", op_sub},
-		 {"*", op_mul},
-		 {"/", op_div},
-		 {"%", op_mod},
-		 {NULL, NULL}};
->>>>>>> 7d61b25ea87bf03edbc2bcee667d3b1d9f1328fb
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
 	int i = 0;
-
+	
 	while (ops[i].op != NULL && *(ops[i].op) != *s)
 		i++;
 
